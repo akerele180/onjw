@@ -5,13 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="/assets/js/navbar.js"></script>
+    <!-- <script src="/assets/js/navbar.js"></script> -->
+    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="/assets/css/about.css" />
     <link
       rel="shortcut icon"
       href="/assets/images/olan-johnson-logo.png"
       type="image/x-icon"
     />
+    <!-- <link
+      href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script> -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -25,7 +31,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap"
       rel="stylesheet"
     />
-    <title>Olan and Johnson | About us</title>
+    <title>Olan and Johnson | About Us</title>
   </head>
   <body>
     <header
@@ -53,7 +59,7 @@
           </li>
           <li class="">
             <a
-              class="after:content-[''] after:absolute after:h-[1.8px] after:w-[30px] after:left-0 after:right-0 after:bg-black after:bottom-0 after:mx-auto after:translate-y-1"
+              class="after:content-[''] after:absolute after:h-[1.8px] after:w-[30px] after:left-0 after:right-0 after:bg-black after:bottom-0 after:mx-auto after:translate-y-2"
               id=""
               href="./about.html"
               >About Us</a
@@ -91,7 +97,7 @@
           </h3>
         </div>
       </section>
-      <section class="px-[5vw] py-4">
+      <section class="px-[5vw] py-12 bg-black text-white">
         <h2
           class="leading-snug text-2xl font-semibold relative after:absolute after:content-[''] after:bottom-0 after:left-0 after:bg-[#64BABE] after:h-[4px] after:w-[40px] after:translate-y-1"
         >
@@ -122,18 +128,32 @@
           </ul>
         </div>
       </section>
-      <section class="px-[5vw] py-4">
-        <h2 class="font-semibold text-lg">Jide Johnson</h2>
-        <h3 class="font-medium text-black/60 leading-3">
-          Founder/CEO at Olan and Johnson
-        </h3>
-        <p class="mt-3">
-          He is a Brand Consultant who has worked extensively with several
-          companies and Nigeria State Governments, building sustainable brand
-          development. His passion also stirs for a vibrant and revolutionized
-          film industry. Jide is the alumnus of the Pan - African Univesity,
-          School of Media & Communication.
-        </p>
+      <section class="px-[5vw] py-8 sm:py-[5rem] grid sm:grid-cols-2">
+        <article class="w-full">
+          <h2 class="font-semibold text-4xl">Jide Johnson</h2>
+          <h3 class="font-medium text-lg text-black/60 leading-5">
+            Founder/CEO at Olan and Johnson
+          </h3>
+          <p class="mt-3">
+            He is a Brand Consultant who has worked extensively with several
+            companies and Nigeria State Governments, building sustainable brand
+            development. His passion also stirs for a vibrant and revolutionized
+            film industry. Jide is the alumnus of the Pan - African Univesity,
+            School of Media & Communication.
+          </p>
+        </article>
+        <aside class="md:w-[400px] max-sm:pt-6 md:h-[500px] relative group">
+          <img
+            class="w-full h-full rounded"
+            src="/assets/images/tos_bnw.png"
+            alt="ceo image"
+          />
+          <span
+            class="flex items-center justify-center absolute top-0 left-0 right-0 w-full bg-black/50 group-hover:z-30 group-hover:opacity-1 ease-out duration-300 -z-50 text-white bottom-0"
+          >
+            <a href="#" class="italic underline text-lg font-medium">View more...</a>
+          </span>
+        </aside>
       </section>
       <footer
         class="fixedd px-[5vw] py-3 md:pt-[20vh] md:pb-[10vh] bg-black text-white mx-auto bottom-0 right-0 left-0"
@@ -201,7 +221,6 @@
         </p>
       </footer>
     </main>
-    <!-- mobile nav -->
     <div
       class="fixed flex items-center top-0 bottom-0 left-0 right-0 z-[999] bg-white/90 h-screen hidden"
     >
@@ -214,14 +233,7 @@
         id="web-nav"
         class="w-full text-black sm:flex font-semibold space-y-12 text-center text-4xl"
       >
-        <li class="">
-          <a
-            class="after:content-[''] after:absolute after:h-[1.8px] after:w-[30px] after:left-0 after:right-0 after:bg-black after:bottom-0 after:mx-auto after:translate-y-2"
-            id=""
-            href="/"
-            >Home</a
-          >
-        </li>
+        <li class=""><a class=" " id="" href="/">Home</a></li>
         <li class="">
           <a class="" id="" href="./projects.html">Projects</a>
         </li>
@@ -229,7 +241,12 @@
           <a class="" id="" href="./contact.html">Contact Us</a>
         </li>
         <li class="">
-          <a class="" id="" href="./about.html">About Us</a>
+          <a
+            class="after:content-[''] after:absolute after:h-[1.8px] after:w-[30px] after:left-0 after:right-0 after:bg-black after:bottom-0 after:mx-auto after:translate-y-2"
+            id=""
+            href="./about.html"
+            >About Us</a
+          >
         </li>
       </ul>
     </div>
