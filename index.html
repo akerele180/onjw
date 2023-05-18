@@ -223,7 +223,7 @@
         </h2>
         <div
           id="marquee"
-          class="grid justify-center items-center gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+          class="hidden grid justify-center items-center gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
         >
           <div>
             <img
@@ -283,6 +283,73 @@
               data-aos-duration="1000"
             />
           </div>
+        </div>
+        <div class="marquee pt-5">
+          <ul class="marquee-content">
+            <li>
+              <img
+                src="/assets/images/confetti.png"
+                alt="riggs"
+                class="text-center"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              />
+            </li>
+            <li>
+              <img
+                src="/assets/images/riggs-london.jpg"
+                alt="riggs"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              />
+            </li>
+            <li>
+              <img
+                src="/assets/images/opic.png"
+                alt="opic"
+                class="mx-auto sm:mx-0"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              />
+            </li>
+            <li>
+              <img
+                src="/assets/images/hennesy-gold.png"
+                alt=""
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              />
+            </li>
+            <li>
+              <img
+                src="/assets/images/green-africa.png"
+                alt=""
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              />
+            </li>
+            <li>
+              <img
+                src="/assets/images/moet.png"
+                alt=""
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              />
+            </li>
+            <li>
+              <img
+                src="/assets/images/Glenmorangie-Master-Logo-orange_veryhigh.width-9500x-prop.png"
+                alt=""
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              />
+            </li>
+            <!-- <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li> -->
+          </ul>
         </div>
       </section>
       <section>
@@ -399,5 +466,21 @@
       <i class="fa-solid fa-angle-up text-2xl"></i>
     </button>
     <script src="/assets/js/navbar.js"></script>
+    <script>
+      const root = document.documentElement;
+      const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue(
+        "--marquee-elements-displayed"
+      );
+      const marqueeContent = document.querySelector("ul.marquee-content");
+
+      root.style.setProperty(
+        "--marquee-elements",
+        marqueeContent.children.length
+      );
+
+      for (let i = 0; i < marqueeElementsDisplayed; i++) {
+        marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+      }
+    </script>
   </body>
 </html>
